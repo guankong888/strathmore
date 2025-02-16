@@ -7,6 +7,7 @@
   <!-- Google Font for an upscale feel -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
+  <!-- Note: Using navbar-light below to show black text -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     /* Global Styles */
@@ -31,7 +32,7 @@
     .navbar-brand {
       font-size: 2.5rem;
       font-weight: bold;
-      color: #fff !important; /* Monochrome: white text */
+      color: #000 !important; /* Company name in black */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -44,7 +45,7 @@
     }
     .nav-link {
       font-size: 1.15rem;
-      color: #fff !important; /* White nav links */
+      color: #000 !important; /* Nav links in black */
     }
     /* Center the nav toggler and links */
     .navbar-collapse {
@@ -58,13 +59,14 @@
       position: relative;
       color: #fff;
     }
+    /* Adjust or remove the overlay if you want the background image more visible */
     .hero-overlay {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.65);
+      background: rgba(0, 0, 0, 0.35); /* Reduced opacity for a lighter overlay */
     }
     .hero-content {
       position: relative;
@@ -133,7 +135,8 @@
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <!-- Using navbar-light to allow for black text -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#home">
         <img src="lion-crest.png" alt="Lion Crest" />
