@@ -31,7 +31,7 @@
     .navbar-brand {
       font-size: 2.5rem;
       font-weight: bold;
-      color: #d4af37 !important;
+      color: #fff !important; /* Monochrome: white text */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -40,19 +40,20 @@
       height: 70px;
       width: auto;
       margin-right: 10px;
+      background-color: transparent; /* Ensure the crest shows transparency */
     }
     .nav-link {
       font-size: 1.15rem;
-      color: #fff !important;
+      color: #fff !important; /* White nav links */
     }
-    /* Ensure the nav toggler and links are centered */
+    /* Center the nav toggler and links */
     .navbar-collapse {
       justify-content: center;
     }
 
     /* Hero Section */
     .hero {
-      background: url('https://source.unsplash.com/1600x900/?boise,scenic') center center/cover no-repeat;
+      background: url('background.png') center center/cover no-repeat;
       height: 100vh;
       position: relative;
       color: #fff;
@@ -94,7 +95,7 @@
       margin-bottom: 40px;
       font-size: 2.75rem;
       text-transform: uppercase;
-      color: #1c1c1c;
+      color: #333;
     }
     .section p {
       font-size: 1.15rem;
@@ -108,11 +109,12 @@
     
     /* Buttons */
     .btn-primary {
-      background-color: #d4af37;
+      background-color: #333; /* Dark gray for a monochrome feel */
       border: none;
+      color: #fff;
     }
     .btn-primary:hover {
-      background-color: #b3922c;
+      background-color: #555;
     }
     
     /* Footer */
