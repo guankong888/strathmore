@@ -16,23 +16,27 @@
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
     }
-    /* Remove background from body and apply it on a fixed pseudo-element */
+    /* Remove background from body and apply video via element */
     body {
       font-family: Arial, sans-serif;
       color: #000;
       position: relative;
     }
-    body::before {
-      content: "";
+    /* Removed the body::before block */
+
+    /* Background Video Styling */
+    .background-video {
       position: fixed;
       top: 0;
       left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('background.png') no-repeat center center;
-      background-size: cover;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
       z-index: -1;
+      object-fit: cover;
     }
+    
     /* Fixed Navigation Bar */
     .navbar {
       background: transparent;
@@ -86,7 +90,7 @@
       font-size: 1rem;
       font-weight: 300;
       margin-bottom: 1rem;
-       }
+    }
     /* Custom Button Override */
     .btn.btn-primary {
       background-color: #000;
@@ -98,10 +102,15 @@
       border-color: #333;
       color: #fff;
     }
-    }
   </style>
 </head>
 <body>
+  <!-- Background Video -->
+  <video class="background-video" autoplay muted loop playsinline>
+    <source src="background-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
