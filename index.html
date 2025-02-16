@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Strathmore Property Solutions - Wholesale Real Estate</title>
-  <!-- Google Font for a classic, upscale look -->
+  <!-- Google Font for an upscale feel -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link
@@ -32,10 +32,9 @@
       align-items: center;
     }
     .navbar-brand svg {
-      height: 50px;
-      width: 50px;
+      height: 60px;
+      width: 60px;
       margin-right: 10px;
-      fill: #d4af37;
     }
     .nav-link {
       font-size: 1.15rem;
@@ -110,12 +109,23 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#home">
-        <!-- Lion Crest SVG (Simplified placeholder) -->
+        <!-- Majestic Lion Crest SVG -->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <!-- Outer circle -->
-          <circle cx="256" cy="256" r="256" fill="none" stroke="#d4af37" stroke-width="20"/>
-          <!-- Simplified lion head silhouette -->
-          <path d="M256 100c-44.183 0-80 35.817-80 80 0 25.59 14.181 48.03 35.34 60.275C191.109 250.827 176 280.894 176 315.5c0 42.289 34.211 76.5 76.5 76.5h27c42.289 0 76.5-34.211 76.5-76.5 0-34.606-15.109-64.673-35.34-75.725C321.819 228.03 336 205.59 336 180c0-44.183-35.817-80-80-80z" fill="#d4af37"/>
+          <defs>
+            <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#b3922c;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <!-- Outer Circle -->
+          <circle cx="256" cy="256" r="250" fill="none" stroke="url(#grad)" stroke-width="20"/>
+          <!-- Lion Head (Simplified Majestic Design) -->
+          <path d="M256 120c-70 0-110 60-110 60s30 10 30 50c0 25-10 60-10 60s40 0 40 0c0 0-10-25 0-45 10-20 40-25 40-25s30 5 40 25c10 20 0 45 0 45s40 0 40 0c0 0-10-35-10-60 0-40 30-50 30-50s-40-60-110-60z" fill="url(#grad)"/>
+          <!-- Eyes -->
+          <circle cx="220" cy="220" r="15" fill="white"/>
+          <circle cx="292" cy="220" r="15" fill="white"/>
+          <!-- Nose/Mouth -->
+          <path d="M256 280c-20 0-40 10-40 30 0 20 20 20 40 20 20 0 40 0 40-20 0-20-20-30-40-30z" fill="white"/>
         </svg>
         Strathmore Property Solutions
       </a>
@@ -173,9 +183,10 @@
         </div>
         <div class="col-md-6 order-md-1">
           <p>
-            Looking to sell your home quickly and efficiently? Our process is designed to connect you with qualified buyers.
-            We take the hassle out of the selling process by providing personalized service, expert market analysis, and a commitment
-            to securing the best possible value for your property.
+            At Strathmore Property Solutions, we understand that you need fast, flexible solutions when selling your home.
+            That’s why we offer quick, no-obligation cash offers, giving you immediate liquidity. Our deals are structured
+            with an innovative contingency clause—if we aren’t able to secure a qualified buyer, you’re free to walk away.
+            This means you get the benefit of fast cash without being locked into a sale that might not work out.
           </p>
         </div>
       </div>
