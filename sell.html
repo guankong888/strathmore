@@ -1,86 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Strathmore Property Solutions - Sell Your Home</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Get Your Offer - Strathmore Property Solutions</title>
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      color: #000;
       background-color: #f8f9fa;
-      padding-top: 90px;
-      text-align: center;
+      color: #333;
+      padding-top: 80px;
     }
-    /* Navigation */
-    .navbar {
-      background: transparent;
-      padding: 15px 0;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 10;
+    .container {
+      max-width: 600px;
     }
-    .navbar-brand {
+    h1 {
       font-family: 'Cinzel', serif;
-      font-size: 2rem;
-      color: #000;
-      display: flex;
-      align-items: center;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
     }
-    .navbar-brand img {
-      height: 70px;
-      margin-right: 10px;
-      background-color: transparent;
+    p.lead {
+      font-size: 1.25rem;
     }
-    .nav-link {
-      color: #000;
-      font-size: 1.15rem;
-      margin: 0 10px;
+    #offerResult h3 {
+      margin-top: 20px;
+      font-family: 'Cinzel', serif;
     }
-    .navbar-collapse {
-      justify-content: center;
-    }
-    /* Main Content */
-    .content {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 30px 15px;
+    .disclaimer {
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="lion-crest.png" alt="Lion Crest">
-        Strathmore Property Solutions
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-         <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-         <ul class="navbar-nav">
-           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-           <li class="nav-item"><a class="nav-link" href="sell.html">Sell Your Home</a></li>
-           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-         </ul>
+  <div class="container">
+    <h1>Get Your Offer</h1>
+    <p class="lead">Enter your home address below to receive a quick, non-binding estimated offer.</p>
+    <p class="disclaimer"><em>Estimated offers are strictly estimates and not binding offers.</em></p>
+    <form id="offerForm">
+      <div class="mb-3">
+        <label for="address" class="form-label">Home Address:</label>
+        <input type="text" class="form-control" id="address" placeholder="123 Main St, Boise, ID" required>
       </div>
-    </div>
-  </nav>
-
-  <!-- Sell Your Home Content -->
-  <div class="content">
-    <h1>Sell Your Home</h1>
-    <p>We offer fast, flexible solutions for selling your home, with quick cash offers and no-obligation consultations.</p>
+      <button type="submit" class="btn btn-primary">Get Estimate</button>
+    </form>
+    <div id="offerResult" class="mt-4"></div>
   </div>
+
+  <script>
+    document.getElementById("offerForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      var address = document.getElementById("address").value;
+      // In a real scenario, you'd call your server (or serverless function) here to get the Zestimate from Zillow.
+      // For demonstration, we'll simulate this with a dummy value.
+      getZillowEstimate(address);
+    });
+
+    function getZillowEstimate(address) {
+      // Simulated API call:
+      // Replace the following dummy logic with a fetch() call to your backend endpoint.
+      console.log("Fetching Zestimate for:", address);
+      // Let's assume the Zillow API returns a Zestimate of $300,000 for demonstration purposes.
+      var dummyZestimate = 300000;
+      displayOffer(dummyZestimate);
+    }
+
+    function displayOffer(zestimate) {
+      var lowerOffer = zestimate * 0.55;
+      var upperOffer = zestimate * 0.65;
+      document.getElementById("offerResult").innerHTML =
+        "<h3>Estimated Offer Range:</h3>" +
+        "<p>$" + lowerOffer.toLocaleString() + " - $" + upperOffer.toLocaleString() + "</p>" +
+        "<p class='disclaimer'><em>Note: These figures are estimates based on Zillow's data and are not binding offers.</em></p>";
+    }
+  </script>
 
   <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
