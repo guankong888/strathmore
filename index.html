@@ -4,23 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Strathmore Property Solutions - Home</title>
-  <!-- Google Fonts (Cinzel with weights 700 & 800) -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Using Cinzel (700 weight) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* Allow rubber band scrolling */
-    html, body {
+    /* Ensure full viewport height and allow bounce scrolling */
+    html {
       height: 100%;
-      margin: 0;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
     }
     body {
+      margin: 0;
+      min-height: 100%;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
       font-family: Arial, sans-serif;
-      background: url('background.png') no-repeat center center fixed;
-      background-size: cover;
       color: #000;
+      position: relative;
+    }
+    /* Pseudo-element to hold the fixed background image */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('background.png') no-repeat center center;
+      background-size: cover;
+      z-index: -1;
     }
     /* Fixed Navigation Bar */
     .navbar {
@@ -59,28 +71,26 @@
       align-items: center;
       text-align: center;
     }
-    /* Hero Content shifted upward */
+    /* Hero Content shifted upward by 50px */
     .hero-content {
       text-align: center;
       padding: 20px 30px;
-      transform: translateY(-30px); /* Shift content upward by 30px */
+      transform: translateY(-50px);
     }
     .hero h1 {
       font-family: 'Cinzel', serif;
       font-size: 3.5rem;
-      font-weight: 800;
       margin-bottom: 1rem;
     }
     .hero p {
       font-size: 1.5rem;
-      font-weight: 700;
       margin-bottom: 1.5rem;
     }
   </style>
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <img src="lion-crest.png" alt="Lion Crest">
@@ -99,7 +109,7 @@
       </div>
     </div>
   </nav>
-  
+
   <!-- Hero Section -->
   <div class="hero">
     <div class="hero-content">
@@ -108,7 +118,7 @@
       <a href="contact.html" class="btn btn-primary">Get In Touch</a>
     </div>
   </div>
-  
+
   <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
