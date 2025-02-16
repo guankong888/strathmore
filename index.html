@@ -4,18 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Strathmore Property Solutions - Wholesale Real Estate</title>
-  <!-- Google Font for an upscale feel -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Using Cinzel for general headings and Playfair Display for the company name -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
-  <!-- Note: Using navbar-light below to show black text -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     /* Global Styles */
     body {
       font-family: Arial, sans-serif;
       background-color: #f8f9fa;
-      color: #333;
-      text-align: center; /* Center all text copy */
+      color: #000; /* All fonts are now black */
+      text-align: center;
     }
     h1, h2, h3, h4 {
       font-family: 'Cinzel', serif;
@@ -23,16 +22,17 @@
     
     /* Navigation */
     .navbar {
-      background-color: transparent !important; /* Transparent top bar */
+      background-color: transparent !important;
       padding: 1rem 0;
     }
     .navbar .container {
-      text-align: center; /* Center the navbar content */
+      text-align: center;
     }
     .navbar-brand {
+      font-family: 'Playfair Display', serif; /* More regal company name font */
       font-size: 2.5rem;
-      font-weight: bold;
-      color: #000 !important; /* Company name in black */
+      font-weight: 700;
+      color: #000 !important;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -41,33 +41,27 @@
       height: 70px;
       width: auto;
       margin-right: 10px;
-      background-color: transparent; /* Ensure the crest shows transparency */
+      background-color: transparent;
     }
     .nav-link {
       font-size: 1.15rem;
-      color: #000 !important; /* Nav links in black */
+      color: #000 !important;
     }
-    /* Center the nav toggler and links */
     .navbar-collapse {
       justify-content: center;
     }
-
+    
     /* Hero Section */
     .hero {
       background: url('background.png') center center/cover no-repeat;
       height: 100vh;
       position: relative;
-      color: #fff;
+      color: #000; /* Black text for hero section */
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    /* Adjust or remove the overlay if you want the background image more visible */
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.35); /* Reduced opacity for a lighter overlay */
-    }
+    /* Removed the overlay to show the background image fully */
     .hero-content {
       position: relative;
       z-index: 2;
@@ -75,7 +69,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100%;
       padding: 0 15px;
     }
     .hero h1 {
@@ -83,10 +76,12 @@
       font-weight: 700;
       text-transform: uppercase;
       margin-bottom: 20px;
+      color: #000;
     }
     .hero p {
       font-size: 1.75rem;
       margin-bottom: 30px;
+      color: #000;
     }
     
     /* Section Styles */
@@ -97,13 +92,13 @@
       margin-bottom: 40px;
       font-size: 2.75rem;
       text-transform: uppercase;
-      color: #333;
+      color: #000;
     }
     .section p {
       font-size: 1.15rem;
       line-height: 1.6;
+      color: #000;
     }
-    /* Center images within sections */
     .section img {
       margin: 0 auto;
       display: block;
@@ -111,12 +106,12 @@
     
     /* Buttons */
     .btn-primary {
-      background-color: #333; /* Dark gray for a monochrome feel */
+      background-color: #000;
       border: none;
       color: #fff;
     }
     .btn-primary:hover {
-      background-color: #555;
+      background-color: #333;
     }
     
     /* Footer */
@@ -130,12 +125,12 @@
     form .form-label,
     form .form-control {
       text-align: center;
+      color: #000;
     }
   </style>
 </head>
 <body>
   <!-- Navigation -->
-  <!-- Using navbar-light to allow for black text -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#home">
@@ -156,17 +151,16 @@
       </div>
     </div>
   </nav>
-
+  
   <!-- Hero Section -->
   <header id="home" class="hero">
-    <div class="hero-overlay"></div>
     <div class="hero-content container">
       <h1 class="display-4">Integrity. Expertise. Results.</h1>
       <p class="lead">Your trusted partner in wholesale real estate in Boise.</p>
       <a href="#contact" class="btn btn-primary btn-lg mt-4">Get In Touch</a>
     </div>
   </header>
-
+  
   <!-- About Us Section -->
   <section id="about" class="section">
     <div class="container">
@@ -185,7 +179,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Sell Your Home Section -->
   <section id="sell" class="section bg-light">
     <div class="container">
@@ -205,7 +199,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Contact Section -->
   <section id="contact" class="section">
     <div class="container">
@@ -231,14 +225,14 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Footer -->
   <footer>
     <div class="container">
       <p>&copy; 2025 Strathmore Property Solutions. All Rights Reserved.</p>
     </div>
   </footer>
-
+  
   <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
