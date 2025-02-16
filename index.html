@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Strathmore Property Solutions - Home</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- Google Fonts (using Cinzel for headings) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* Global Reset & Box Sizing */
-    * {
-      box-sizing: border-box;
-    }
-    body {
+    /* Ensure the entire viewport is used and disable scrolling */
+    html, body {
+      height: 100%;
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: #000;
-      background-color: #f8f9fa;
-      /* Offset for fixed navbar */
-      padding-top: 90px;
-      text-align: center;
+      overflow: hidden;
     }
-    /* Navbar */
+    /* Set the background image as full-screen */
+    body {
+      font-family: Arial, sans-serif;
+      background: url('background.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #000;
+    }
+    /* Fixed Navigation Bar */
     .navbar {
       background: transparent;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
       padding: 15px 0;
     }
     .navbar-brand {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #000 !important;
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      color: #000;
       display: flex;
       align-items: center;
     }
@@ -41,86 +44,66 @@
       background-color: transparent;
     }
     .nav-link {
+      color: #000;
       font-size: 1.15rem;
-      color: #000 !important;
       margin: 0 10px;
     }
-    .navbar-collapse {
-      justify-content: center;
-    }
-    /* Hero Section */
+    /* Hero Section - full screen */
     .hero {
-      height: 100vh;
-      background: url('background.png') center center/cover no-repeat;
+      height: 100%;
       display: flex;
-      align-items: center;
       justify-content: center;
-      position: relative;
-    }
-    /* Hero Content with a subtle white overlay box */
-    .hero-content {
+      align-items: center;
       text-align: center;
+    }
+    /* Optional content box to help text readability */
+    .hero-content {
       background: rgba(255, 255, 255, 0.8);
-      padding: 30px 20px;
+      padding: 20px 30px;
       border-radius: 8px;
-      max-width: 90%;
-      margin: 0 auto;
     }
     .hero h1 {
       font-family: 'Cinzel', serif;
-      font-size: 3.5rem;
+      font-size: 3rem;
       margin-bottom: 1rem;
     }
     .hero p {
       font-size: 1.5rem;
-      margin-bottom: 2rem;
-    }
-    /* Footer */
-    footer {
-      background: #1c1c1c;
-      color: #fff;
-      padding: 20px 15px;
-      text-align: center;
-      margin-top: 30px;
+      margin-bottom: 1.5rem;
     }
   </style>
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="#">
         <img src="lion-crest.png" alt="Lion Crest">
         Strathmore Property Solutions
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="sell.html">Sell Your Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Sell Your Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
+
   <!-- Hero Section -->
-  <header class="hero">
+  <div class="hero">
     <div class="hero-content">
       <h1>Integrity. Expertise. Results.</h1>
       <p>Your trusted partner in wholesale real estate in Boise.</p>
-      <a href="contact.html" class="btn btn-primary btn-lg">Get In Touch</a>
+      <a href="#" class="btn btn-primary">Get In Touch</a>
     </div>
-  </header>
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Strathmore Property Solutions. All Rights Reserved.</p>
-    </div>
-  </footer>
+  </div>
+
   <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
