@@ -4,34 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Strathmore Property Solutions - About Us</title>
-  <!-- Google Fonts -->
+  <!-- Google Fonts (Cinzel with weights 700 & 400) -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body {
+    /* Enable rubber band scrolling on iOS */
+    html, body {
+      height: 100%;
       margin: 0;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    /* Body styling and positioning */
+    body {
       font-family: Arial, sans-serif;
       color: #000;
-      background-color: #f8f9fa;
-      padding-top: 90px;
-      text-align: center;
+      position: relative;
     }
-    /* Navigation */
+    /* Background Video Styling */
+    .background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      object-fit: cover;
+    }
+    /* Navigation Bar */
     .navbar {
       background: transparent;
-      padding: 15px 0;
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 10;
+      padding: 15px 0;
     }
     .navbar-brand {
       font-family: 'Cinzel', serif;
-      font-size: 2rem;
+      font-size: 2.75rem;
       color: #000;
       display: flex;
-      align-items: center;
+      align-items: flex-start;  /* Left align the crest and text */
     }
     .navbar-brand img {
       height: 70px;
@@ -46,15 +63,22 @@
     .navbar-collapse {
       justify-content: center;
     }
-    /* Main Content */
-    .content {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 30px 15px;
+    /* Page Content Container */
+    .page-content {
+      margin-top: 120px;
+      padding: 40px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
+  <!-- Background Video -->
+  <video class="background-video" autoplay muted loop playsinline>
+    <source src="background-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
@@ -63,23 +87,23 @@
         Strathmore Property Solutions
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-         <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-         <ul class="navbar-nav">
-           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-           <li class="nav-item"><a class="nav-link" href="sell.html">Sell Your Home</a></li>
-           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-         </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="sell.html">Sell Your Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
       </div>
     </div>
   </nav>
 
-  <!-- About Us Content -->
-  <div class="content">
+  <!-- Page Content -->
+  <div class="container page-content">
     <h1>About Us</h1>
-    <p>At Strathmore Property Solutions, we are dedicated to delivering excellence in wholesale real estate. With years of experience in the Boise market, our team provides exceptional service with integrity and professionalism.</p>
+    <p>Here you can put the content of your About Us page. The background video will be visible on all pages except index, ensuring consistency throughout your site.</p>
   </div>
 
   <!-- Bootstrap Bundle JS -->
